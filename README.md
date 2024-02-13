@@ -18,7 +18,7 @@ The game has three main views:
 
 We have supplied you with the following:
 
-1. An API. The API is entirely written for you and you do not have to open the folder at all as a part of this project. This server is written in Go and is where the logic lives that controlls the racers and tracks. All you have to do is run a terminal command to start the server and then send requests to it as you run the project.
+1. An API. The API is entirely written for you and you do not have to open the folder at all as a part of this project. This server is written in Go and is where the logic lives that controls the racers and tracks. All you have to do is run a terminal command to start the server and then send requests to it as you run the project.
 
 2. HTML Views. The focus of this course is not UI development or styling practice, so we have already provided you with chunks of the UI, all you have to do is call them (render them to the view) at the right times. That said, if you want to add some color, images, and other snazziness to your project, go right ahead!
 
