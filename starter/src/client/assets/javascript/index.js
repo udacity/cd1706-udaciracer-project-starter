@@ -318,7 +318,7 @@ function renderAt(element, html) {
 
 // API CALLS ------------------------------------------------
 
-const SERVER = window.location.origin
+const SERVER = 'http://localhost:3001'
 
 function defaultFetchOpts() {
 	return {
@@ -333,15 +333,15 @@ function defaultFetchOpts() {
 // TODO - Make a fetch call (with error handling!) to each of the following API endpoints 
 
 function getTracks() {
-	console.log(`calling server :: ${SERVER}/proxy/3001/api/tracks`)
-	// GET request to `${SERVER}/proxy/3001/api/tracks`
+	console.log(`calling server :: ${SERVER}/api/tracks`)
+	// GET request to `${SERVER}/api/tracks`
 
 	// TODO: Fetch tracks
 	// TIP: Don't forget a catch statement!
 }
 
 function getRacers() {
-	// GET request to `${SERVER}/proxy/3001/api/cars`
+	// GET request to `${SERVER}/api/cars`
 
 	// TODO: Fetch racers
 	// TIP: Do a file search for "TODO" to make sure you find all the things you need to do! There are even some vscode plugins that will highlight todos for you
@@ -352,7 +352,7 @@ function createRace(player_id, track_id) {
 	track_id = parseInt(track_id)
 	const body = { player_id, track_id }
 	
-	return fetch(`${SERVER}/proxy/3001/api/races`, {
+	return fetch(`${SERVER}/api/races`, {
 		method: 'POST',
 		...defaultFetchOpts(),
 		dataType: 'jsonp',
@@ -363,11 +363,11 @@ function createRace(player_id, track_id) {
 }
 
 function getRace(id) {
-	// GET request to `${SERVER}/proxy/3001/api/races/${id}`
+	// GET request to `${SERVER}/api/races/${id}`
 }
 
 function startRace(id) {
-	return fetch(`${SERVER}/proxy/3001/api/races/${id}/start`, {
+	return fetch(`${SERVER}/api/races/${id}/start`, {
 		method: 'POST',
 		...defaultFetchOpts(),
 	})
@@ -376,7 +376,7 @@ function startRace(id) {
 }
 
 function accelerate(id) {
-	// POST request to `${SERVER}/proxy/3001/api/races/${id}/accelerate`
+	// POST request to `${SERVER}/api/races/${id}/accelerate`
 	// options parameter provided as defaultFetchOpts
 	// no body or datatype needed for this request
 }
